@@ -1,86 +1,103 @@
 {
-    "For Next Loop": {
-        "prefix": "for",
+    "if only": {
+        "prefix": "if",
         "body": [
-            "For ${1:index} As ${2:ObjectType} = ${3:lower} To ${4:Upper}",
+            "if ${1:Condition} then",
             "\t$0",
-            "Next ${1:index}"
+            "end if"
         ],
-        "description": "For Next Loop"
+        "description": "if only"
+
     },
-    "For Each...Next": {
-        "prefix": "fore",
+
+    "if else": {
+        "prefix": "ife",
         "body": [
-            "For Each ${1:Variable} As ${2:ObjectType} In ${3:Collection}",
+            "if ${1:Condition} then",
             "\t$0",
-            "Next"
+            "else",
+            "\t",
+            "end if"
         ],
-        "description": "For Each...Next"
+        "description": "if else"
     },
-    "For i...Next i": {
-        "prefix": "fori",
+
+    "for to": {
+        "prefix": "fort",
         "body": [
-            "For i As ${1:Integer} = ${2:Lower} To ${3:Upper}",
+            "for ${1:Counter} = ${2:StartValue} to ${3:EndValue} step ${4:StepValue}",
             "\t$0",
-            "Next i"
+            "next ${1:Counter}"
         ],
-        "description": "For i...Next i"
+        "description": "for to"
     },
-    "For j...Next j": {
-        "prefix": "forj",
+
+    "for down": {
+        "prefix": "ford",
         "body": [
-            "For j As ${1:Integer} = ${2:Lower} To ${3:Upper}",
+            "for ${1:Counter} = ${2:StartValue} down ${3:EndValue} step ${4:StepValue}",
             "\t$0",
-            "Next j"
+            "next ${1:Counter}"
         ],
-        "description": "For j...Next j"
+        "description": "for down"
     },
-    "Public Function...": {
-        "prefix": "pf",
-        "body": [
-            "Public Function ${1:FunctionName}(${2:ParameterList}) As ${3:ReturnType}",
-            "\tTry",
-            "\t\t$0",
-            "\tCatch ex As Exception",
-            "\tEnd Try",
-            "\tReturn ${3:ReturnValue}",
-            "End Function"
-        ],
-        "description": "Public Function..."
-    },
-    "Public Sub ...": {
-        "prefix": "ps",
-        "body": [
-            "Public Sub ${1:ProcedureName}(${2:ParameterList})",
-            "\tTry",
-            "\t\t$0",
-            "\tCatch ex As Exception",
-            "\tEnd Try",
-            "End Sub"
-        ],
-        "description": "Public Sub ..."
-    },
-    "While ... End While": {
+
+    "while loop": {
         "prefix": "while",
         "body": [
-            "While ${1:Boolean}",
+            "while ${1:Condition}",
             "\t$0",
-            "End While"
+            "wend"
         ],
-        "description": "While ... End While"
+        "description": "while loop"
     },
-    "Region Start": {
-        "prefix": "#Region",
+
+
+
+
+    "sub return": {
+        "prefix": ["sub", "subr"],
         "body": [
-            "#Region $0"
+            "sub ${1:Type} ${2:Function}(${3:Param})",
+            "\t$0",
+            "\treturn",
+            "end sub"
         ],
-        "description": "Folding Region Start"
+        "description": "sub return"
     },
-    "Region End": {
-        "prefix": "#End Region",
+
+    "sub": {
+        "prefix": "sub",
         "body": [
-            "#End Region"
+            "sub ${1:Function}(${2:Param})",
+            "\t$0",
+            "end sub"
         ],
-        "description": "Folding Region End"
+        "description": "sub"
+    },
+
+    "select": {
+        "prefix": "select",
+        "body": [
+            "select case ${1:Variable}",
+            "case ${2:Constant}",
+            "\t$0",
+            "\tbreak",
+            "case else",
+            "\t",
+            "end select"
+        ],
+        "description": "select fsdf"
+
     }
+
+
+
+
+
+
+
+
+
+
 }

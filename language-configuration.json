@@ -1,72 +1,34 @@
 {
     "comments": {
-        "lineComment": "\/\/'"
+        "lineComment": "\/\/"
     },
     "brackets": [
-        [
-            "{",
-            "}"
-        ],
-        [
-            "[",
-            "]"
-        ],
-        [
-            "(",
-            ")"
-        ],
-        [
-            "<",
-            ">"
-        ]
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["<", ">"]
     ],
     "autoClosingPairs": [
-        [
-            "{",
-            "}"
-        ],
-        [
-            "[",
-            "]"
-        ],
-        [
-            "(",
-            ")"
-        ],
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
         {
             "open": "\"",
             "close": "\"",
-            "notIn": [
-                "string"
-            ]
+            "notIn": ["string"]
         }
     ],
     "surroundingPairs": [
-        [
-            "{",
-            "}"
-        ],
-        [
-            "[",
-            "]"
-        ],
-        [
-            "(",
-            ")"
-        ],
-        [
-            "\"",
-            "\""
-        ],
-        [
-            "<",
-            ">"
-        ]
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"","\""],
+        ["<", ">"]
     ],
     "folding": {
         "markers": {
-            "start": "^\\s*#Region\\b",
-            "end": "^\\s*#End Region\\b"
-        }
+            "start": "(^\\s*#Region\\b)|(^\\s*sub\\b)|(^\\s*while\\b)|(^\\s*if\\b)|(^\\s*macro_command\\b)",
+            "end": "(^\\s*#End Region\\b)|(^\\s*end sub\\b)|(^\\s*wend\\b)|(^\\s*end if\\b)|(^\\s*end macro_command\\b)"
+            },
     }
 }

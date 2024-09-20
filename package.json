@@ -1,46 +1,37 @@
 {
-    "name": "vbs",
-    "displayName": "%displayName%",
-    "description": "%description%",
+    "name": "vbseb",
+    "displayName": "VBScript for Weintek EasyBuilder",
+    "description": "Provides snippets, syntax highlighting, bracket matching and folding in Weintek EasyBuilder scripts.",
     "version": "1.0.0",
     "publisher": "vscode",
     "license": "MIT",
     "engines": {
         "vscode": "*"
     },
-    "scripts": {
-        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/asp.vb.net.tmbundle Syntaxes/ASP%20VB.net.plist ./syntaxes/asp-vb-net.tmlanguage.json"
-    },
     "contributes": {
         "languages": [
             {
-                "id": "vbs",
-                "extensions": [
-                    ".vbs"
-                ],
-                "aliases": [
-                    "Visual Basic for Weintek",
-                    "vbs"
-                ],
+                "id": "vbseb",
+                "extensions": [".vbs"],
+                "aliases": ["Visual Basic Script for EasyBuilder", "vbseb"],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "vbs",
-                "scopeName": "source.asp.vb.net",
+                "language": "vbseb",
+                "scopeName": "source.mfmc.vb.net",
                 "path": "./syntaxes/vbs.tmlanguage.json"
             }
         ],
         "snippets": [
             {
-                "language": "vbs",
+                "language": "vbseb",
                 "path": "./snippets/vbs.code-snippets"
             }
         ]
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/microsoft/vscode.git"
+    "scripts": {
+        "start": "node ./scripts/start.js"
     }
 }
